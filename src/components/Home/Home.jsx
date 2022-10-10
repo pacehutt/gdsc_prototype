@@ -39,9 +39,12 @@ function Home() {
 
       <div className="events">
         <Typography variant="h4" component={'span'} sx={{
-          fontWeight: 'bold',
+          fontWeight: '600',
           color: '#299c65',
           borderBottom: '2px solid #4285f4',
+          fontSize: '1.6rem',
+          
+  fontFamily: "Open Sans, sans-serif"
         }}>
           Events
         </Typography>
