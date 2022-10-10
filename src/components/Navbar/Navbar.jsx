@@ -10,10 +10,12 @@ function Navbar() {
   const navDisplay = () => {
     if (showNav) {
       document.querySelector('.nav-items').classList.remove('showNav');
-      setShowNav(false);
+      document.getElementById('checkbox2').checked = false;
+      setShowNav(!showNav);
     } else {
       document.querySelector('.nav-items').classList.add('showNav');
-      setShowNav(true);
+      setShowNav(!showNav);
+      document.getElementById('checkbox2').checked = false
     }
   };
 
@@ -25,19 +27,19 @@ function Navbar() {
 
       <div className='nav-items'>
         <ul>
-          <NavLink id='home' to='/'>
+          <NavLink onClick={navDisplay} id='home' to='/'>
             Home
           </NavLink>
-          <NavLink id='events' to='/events'>
+          <NavLink onClick={navDisplay} id='events' to='/events'>
             Events
           </NavLink>
-          <NavLink id='team' to='/team'>
+          <NavLink onClick={navDisplay} id='team' to='/team'>
             Team
           </NavLink>
-          <NavLink id='about' to='/about'>
+          <NavLink onClick={navDisplay} id='about' to='/about'>
             About
           </NavLink>
-          <NavLink id='blog' to='/blog'>
+          <NavLink onClick={navDisplay} id='blog' to='/blog'>
             Blog
           </NavLink>
         </ul>

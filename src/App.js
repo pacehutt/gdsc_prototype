@@ -9,10 +9,10 @@ import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Router>
         <Navbar></Navbar>
-        <Sidebar></Sidebar>
+        
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/events' element={<Events />}></Route>
@@ -20,6 +20,7 @@ function App() {
           <Route path='/about' element={<Home />}></Route>
           <Route path='/blog' element={<Home />}></Route>
         </Routes>
+        <Sidebar></Sidebar>
       </Router>
     </div>
   );
