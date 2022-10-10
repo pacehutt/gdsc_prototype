@@ -79,7 +79,7 @@
   pointer-events: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .nav {
     padding-left: 12px;
   }
