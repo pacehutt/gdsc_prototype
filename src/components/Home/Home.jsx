@@ -2,7 +2,6 @@ import React from "react";
 import "./Home.css";
 import introBG from "../../assets/home-intro-bg.gif";
 import Button from "@mui/material/Button";
-import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -130,7 +129,7 @@ function Home() {
             justifyContent:{
               xs:'flex-end',
               sm:'center'
-              
+
               // sm:'flex-end',
             }
             
