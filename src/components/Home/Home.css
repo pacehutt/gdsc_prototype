@@ -11,7 +11,24 @@
 {
     margin-left: 70px;
 }
-.body_bg
+.home-fade-bottom
+{
+    height: 6.5rem;
+    background-image: 
+        linear-gradient(
+            to bottom,
+            
+            #00000000,
+            rgb(208 224 255 / 61%),
+            #fff
+        )
+    ;
+    /* background-image: linear-gradient(to bottom, #e6dada3a, #274046); */
+    position:relative;
+    /* bottom: 1rem; */
+    z-index: 2;
+}
+.body-bg
 {
     top: 50vh;
     width: 190px;
@@ -20,6 +37,7 @@
     right: 4vw;
     /* opacity: 2.5; */
     z-index: 3;
+    pointer-events: none;
 }
 .intro
 {
@@ -88,21 +106,54 @@
     
   font-family: 'Open Sans', sans-serif;
 }
-.motive_para
+.motive-para
 {
     width: 50%;
 }
-.contact_scroll_div
+.motive-img
+{
+    width: 350px;
+    pointer-events: none;
+}
+.events-img
+{
+    width: 200px;
+    height: 150px;
+    pointer-events: none;
+}
+.contact-scroll-div
 {
    width: 100%;
 }
+.team-img
+{
+
+    width: 200px;
+    opacity: 0.9;
+    pointer-events: none;
+}
+.blog-img
+{
+    width: 200px;
+    pointer-events: none;
+}
 @media screen and (max-width: 850px)
 {
-    .motive_para
+    .motive-img
+{
+    width: 250px;
+    pointer-events: none;
+}
+.events-img {
+    width: 115px;
+    height: 85px;
+    pointer-events: none;
+}
+    .motive-para
     {
         width: 120%;
     }
-    .body_bg
+    .body-bg
     {
         display: none;
     }
@@ -138,6 +189,10 @@
         margin: 2rem 0;
         margin-top: 3rem;
         padding-left: 0rem;
+    }
+    .img-div
+    {
+        width: 250px;
     }
 
 }
