@@ -3,15 +3,63 @@ import "./Home.css";
 import introBG from "../../assets/home-intro-bg.gif";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import ArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import { CardActionArea } from "@mui/material";
+import styled from "@emotion/styled";
+import { Typography,Box } from "@mui/material";
+import ScrollAnimation from 'react-animate-on-scroll';
+import SearchIcon from '@mui/icons-material/Search';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import bodyBG from "../../assets/home-body-bg.gif";
+
+
+// import "animate.css/animate.min.css";
+
 
 function Home() {
+
+
+   const CustomBox=styled(Box)`
+    background-color: white;
+    // color: rgb(87 87 87 / 73%);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    width: {
+      xs: 100%;
+      sm: 100%;
+      md: 50%;
+    }
+    gap: 2rem;
+    display: flex;
+    // gap: 1rem;
+    flex-direction: column;
+
+   `
+   const CustomGridItem= styled(Grid)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    // paddingTop: 5rem;
+    xs={12}
+    `
+    
+    const CustomButton=styled(Button)`
+    background-color: #4285f4;
+    color: white;
+    font-weight: 600;
+    width: '150px',
+    // font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius:7px;
+    `
+
   return (
+   
     <div className="home">
       <div className="intro">
         <div className="introInfo">
@@ -36,125 +84,198 @@ function Home() {
 
         <img src={introBG} alt="" />
       </div>
+           <div className="home-main-body">
+         
+               <img className="body_bg" src={bodyBG} alt="" />
+                  
+                <Grid container>
 
-      <div className="events">
-        <Typography variant="h4" component={'span'} sx={{
-          fontWeight: '600',
-          color: '#299c65',
-          borderBottom: '2px solid #4285f4',
-          fontSize: '1.6rem',
-          
-  fontFamily: "Open Sans, sans-serif"
-        }}>
-          Events
-        </Typography>
-
-        <Grid container spacing={6} sx={{paddingTop:"2rem"}}>
-  
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card sx={{ maxWidth: 345 }}  elevation={5}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="https://images.unsplash.com/photo-1590488395599-1299b500d29b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGdvb2dsZSUyMGV2ZW50c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                  alt="event"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Android Basics
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-                    aperiam consectetur necessitatibus error itaque, cumque,
-                    natus sint minus sequi quia ullam, molestiae alias quis
-                    ipsam. Natus iste numquam iusto harum.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            
-          </Grid> <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card sx={{ maxWidth: 345 }}  elevation={5}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="https://images.unsplash.com/photo-1590488395599-1299b500d29b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGdvb2dsZSUyMGV2ZW50c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                  alt="event"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Android Basics
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-                    aperiam consectetur necessitatibus error itaque, cumque,
-                    natus sint minus sequi quia ullam, molestiae alias quis
-                    ipsam. Natus iste numquam iusto harum.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            
-          </Grid> <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Card sx={{ maxWidth: 345 }}  elevation={5}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="https://images.unsplash.com/photo-1590488395599-1299b500d29b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGdvb2dsZSUyMGV2ZW50c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                  alt="event"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Android Basics
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-                    aperiam consectetur necessitatibus error itaque, cumque,
-                    natus sint minus sequi quia ullam, molestiae alias quis
-                    ipsam. Natus iste numquam iusto harum.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            
-          </Grid>
-
-          <Grid item display={'flex'} alignItems={"center"} sx={{
-            width:{
-              xs:'100%',
-              sm:'20%',
-              // sm:'100%',
-
-            },
-            justifyContent:{
-              xs:'flex-end',
-              sm:'center'
-
-              // sm:'flex-end',
-            }
-            
-          }}>
-            <Button sx={{
-                width:'150px',
                
-                color:'#299c65',
-                
-                cursor:'pointer',
-                '&:hover': {
-                  backgroundColor: '#d7ffec',
-                  color: 'rgb(87 87 87 / 73%)',
-                },
-                
-              }}>View All <ArrowRightIcon></ArrowRightIcon></Button>
-          </Grid>
-        </Grid>
-      </div>
+                <ScrollAnimation animatePreScroll='false' animateIn="fadeInUp" animateOut="fadeOutUp">
+ 
 
-      div.
+            
+
+                <CustomGridItem item>
+                       <CustomBox>
+                       <ScrollAnimation animatePreScroll='false' animateIn="fadeInUp" >
+
+                        <Typography variant="h4" component="h3"  >Our Motive</Typography>
+                       </ScrollAnimation>
+                        <ScrollAnimation className="motive_para" 
+                       animatePreScroll='false' animateIn="fadeInUp" delay={0}>
+                        <Typography variant="subtitle" sx={{
+                          width:{
+                           
+                            xs:'120%',
+                            sm:'80%',
+                            md:'50%',
+                          },
+                          fontSize:'1.1rem',
+                        }}>
+
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo impedit ipsum ullam modi dolore exercitationem error ratione facilis aliquid fugiat nemo, vero vitae et iste. Voluptatibus ab minima suscipit atque?
+                        </Typography>
+                         
+
+                        <Typography variant="subtitle" sx={{
+                          width:{
+                            xs:'120%',
+                            sm:'90%',
+                            md:'50%',
+                            
+                          }
+                          ,
+                          fontSize:'1.1rem',
+                        }}>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo impedit ipsum ullam  suscipit atque?
+                        </Typography>
+                          </ScrollAnimation>
+                       </CustomBox>
+                </CustomGridItem> 
+                </ScrollAnimation>
+ 
+ <ScrollAnimation animatePreScroll='false' animateIn="fadeInLeft"  >
+
+  
+                <CustomGridItem item>
+                       <CustomBox>
+                        <Typography variant="h4" component="h3" >Events</Typography>
+                        <Typography variant="subtitle"  sx={{
+                          width:{
+                            xs:'120%',
+                            sm:'90%',
+                            md:'50%',
+                            
+                          }
+                        ,
+                          fontSize:'1.1rem',
+                        }}>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo impedit ipsum ullam modi dolore exercitationem error ratione facilis aliquid fugiat nemo, vero vitae et iste. Voluptatibus ab minima suscipit atque?
+                        </Typography>
+                       <CustomButton sx={{
+                          width: '150px',
+                        
+                       ' &:hover':{
+                         backgroundColor: 'white',
+                         color: '#4285f4',
+                        }
+
+                       }}>Know More <SearchIcon sx={{
+                        marginLeft: '0.5rem',
+                       }}></SearchIcon></CustomButton>
+                       </CustomBox>
+                </CustomGridItem> 
+               
+                        </ScrollAnimation>
+                
+                        <ScrollAnimation animatePreScroll='false' animateIn="fadeInRight"  >
+
+                <CustomGridItem item>
+                       <CustomBox>
+                        <Typography variant="h4" component="h3" >Our Team</Typography>
+                        <Typography variant="subtitle"  sx={{
+                          width:{
+                            xs:'120%',
+                            sm:'90%',
+                            md:'50%',
+                            
+                          }
+                        ,
+                          fontSize:'1.1rem',
+                        }}>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo impedit ipsum ullam modi dolore exercitationem error ratione facilis aliquid fugiat nemo, vero vitae et iste. Voluptatibus ab minima suscipit atque?
+                        </Typography>
+                        <Button sx={{
+                         fontWeight: '600',
+                         width: '150px',
+                         // font-size: 1rem;
+                         padding: '0.5rem 1rem',
+                         borderRadius:'7px',
+                         backgroundColor: '#e2aa00',
+                          color: 'white',
+
+                       '&:hover':{
+                          backgroundColor: 'white',
+                          color: '#e2aa00',
+                        }
+
+                       }}>The Team <PeopleAltIcon sx={{
+                        marginLeft: '0.5rem',
+                       }}></PeopleAltIcon></Button>
+                       </CustomBox>
+                </CustomGridItem>
+          
+                
+                </ScrollAnimation>
+
+                <ScrollAnimation animatePreScroll='false' animateIn="fadeInLeft"  >
+
+                <CustomGridItem item>
+                       <CustomBox>
+                        <Typography variant="h4" component="h3" >Our Blogs</Typography>
+                        <Typography variant="subtitle"  sx={{
+                          width:{
+                            xs:'120%',
+                            sm:'90%',
+                            md:'50%',
+                            
+                          }
+                        ,
+                          fontSize:'1.1rem',
+                        }}>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo impedit ipsum ullam modi dolore exercitationem error ratione facilis aliquid fugiat nemo, vero vitae et iste. Voluptatibus ab minima suscipit atque?
+                        </Typography>
+                        <Button sx={{
+                         fontWeight: '600',
+                         width: '150px',
+                       // font-size: 1rem;
+                       padding: '0.5rem 1rem',
+                       borderRadius:'7px',
+                       backgroundColor: '#299c65',
+                       color: 'white',
+                       '&:hover':{
+                          backgroundColor: 'white',
+                          color: '#299c65',
+
+                        }
+
+                       }}>Let's Read <AutoStoriesIcon sx={{
+                        marginLeft: '0.5rem',
+                       }}></AutoStoriesIcon> </Button>
+                       </CustomBox>
+                </CustomGridItem>
+                         </ScrollAnimation>
+                <ScrollAnimation className="contact_scroll_div" animatePreScroll='false' animateIn="fadeInUp"  >
+
+                <CustomGridItem item>
+                       <CustomBox>
+                        <Typography variant="h4" component="h3" >Contact Us</Typography>
+                        <Typography variant="subtitle"  sx={{
+                          width:{
+                            xs:'120%',
+                            sm:'90%',
+                            md:'50%',
+                            
+                          }
+                        ,
+                          fontSize:'1.1rem',
+                        }}>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo impedit ipsum ullam  minima suscipit atque?
+                        </Typography>
+                        <Typography variant="subtitle">
+                  Links with logos to be given here
+                        </Typography>
+                       </CustomBox>
+                </CustomGridItem>
+                            </ScrollAnimation>
+               
+                </Grid>
+
+           </div>
+      
     </div>
+               
   );
 }
         

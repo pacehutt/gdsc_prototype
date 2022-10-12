@@ -24,6 +24,8 @@
     font-family: 'Open Sans', sans-serif;
     align-items: center;
     position: fixed;
+    z-index: 2;
+    background-color: #fff;
 }
 
 .logo img {
@@ -111,6 +113,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    margin-top: 2rem;
     align-items: center;
     padding-top: 3rem;
     gap: 25px;
