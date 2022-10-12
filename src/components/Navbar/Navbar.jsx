@@ -8,14 +8,18 @@ import logo from '../../assets/gdscLogo.png';
 function Navbar() {
   const [showNav, setShowNav] = useState(false);
   const navDisplay = () => {
+
+    let ham = document.getElementById('checkbox2');
     if (showNav) {
       document.querySelector('.nav-items').classList.remove('showNav');
-      document.getElementById('checkbox2').checked = false;
+
+      ham.checked = ham.checked?false:true;
       setShowNav(!showNav);
     } else {
       document.querySelector('.nav-items').classList.add('showNav');
       setShowNav(!showNav);
-      document.getElementById('checkbox2').checked = false
+      ham.checked = ham.checked?true:false;
+      document.querySelector('.App').style.overflow = 'hidden';
     }
   };
 

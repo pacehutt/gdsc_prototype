@@ -2,7 +2,6 @@ import React from "react";
 import "./Home.css";
 import introBG from "../../assets/home-intro-bg.gif";
 import Button from "@mui/material/Button";
-import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -40,9 +39,12 @@ function Home() {
 
       <div className="events">
         <Typography variant="h4" component={'span'} sx={{
-          fontWeight: 'bold',
+          fontWeight: '600',
           color: '#299c65',
           borderBottom: '2px solid #4285f4',
+          fontSize: '1.6rem',
+          
+  fontFamily: "Open Sans, sans-serif"
         }}>
           Events
         </Typography>
@@ -130,7 +132,7 @@ function Home() {
             justifyContent:{
               xs:'flex-end',
               sm:'center'
-              
+
               // sm:'flex-end',
             }
             
@@ -150,6 +152,8 @@ function Home() {
           </Grid>
         </Grid>
       </div>
+
+      div.
     </div>
   );
 }
