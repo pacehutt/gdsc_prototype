@@ -10,12 +10,12 @@ function Navbar() {
   const navDisplay = () => {
     if (showNav) {
       document.querySelector('.nav-items').classList.remove('showNav');
-      document.getElementById('checkbox2').checked = false;
+      document.getElementById('checkbox2').checked = true;
       setShowNav(!showNav);
     } else {
       document.querySelector('.nav-items').classList.add('showNav');
       setShowNav(!showNav);
-      document.getElementById('checkbox2').checked = false
+      document.getElementById('checkbox2').checked = false;
     }
   };
 
